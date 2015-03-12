@@ -3,6 +3,8 @@ import sys
 import glob
 
 
+globstr = "/home/jagust/graph/data/mri1.5/rest/freesurfer/B*"
+dir_paths = sorted(glob.glob(globstr))
 
 ### Error Handling ###
 def args_error(a):
@@ -12,7 +14,7 @@ def args_error(a):
 def subscan_error(s):
     print "Error: Subject scan %s does not exist" % (s)
     sys.exit()
-    
+
 
 
 args = sys.argv
